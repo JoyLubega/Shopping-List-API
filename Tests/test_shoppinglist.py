@@ -26,7 +26,7 @@ class ShoppingListTestCase(unittest.TestCase):
     def test_add_list_without_list_name(self):
         """Should return  error code 400 for missing list name"""
         mylist = json.dumps({
-            'nameoflist': '',
+            'nameoflist': ''
             
         })
         response = self.client.post('/shoplists', data=mylist,

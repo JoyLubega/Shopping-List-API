@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, \
     check_password_hash
 
 
-class UserModal(db.Model):
+class UserModel(db.Model):
     """
     User Database Modal
     """
@@ -49,9 +49,9 @@ class UserModal(db.Model):
         return "<User: {}>".format(self.name)
 
 
-class ShoppinglistsModal(db.Model):
+class ShoppinglistsModel(db.Model):
     """
-    Shopping Lists database Modal
+    Shopping Lists database Model
     """
     __tablename__ = 'lists'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -87,7 +87,7 @@ class ShoppinglistsModal(db.Model):
         db.session.commit()
 
     def __repr__(self) -> str:
-        return "<Bucket: {}>".format(self.name)
+        return "<Shoplist: {}>".format(self.name)
 
 
 class ItemsModal(db.Model):

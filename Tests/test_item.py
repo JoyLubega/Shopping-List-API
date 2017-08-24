@@ -27,7 +27,7 @@ class ItemTestCase(unittest.TestCase):
         """Should return 400 for missing item name"""
         item = json.dumps({
             'nameofitem': ''
-            'priceofitem':3000
+            'priceofitem':'3000'
             
             
             })
