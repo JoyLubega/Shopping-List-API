@@ -68,7 +68,7 @@ class AuthenticationTestCase(unittest.TestCase):
             'name': 'Joy',
             'email': 'candy@gmail.com',
             'password': 'phaneroo'
-        }))
+        })
         #self.client.post('/auth/register', data=user)
         response = self.client.post('/auth/register', data=user)
         self.assertEqual(response.status_code, 400)

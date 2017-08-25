@@ -27,7 +27,8 @@ class ItemTestCase(unittest.TestCase):
         """Should return 400 for missing item name"""
         item = json.dumps({
             'nameofitem': ''
-            'priceofitem':'3000'
+            'price of item':3000
+            
             
             
             })
@@ -40,7 +41,7 @@ class ItemTestCase(unittest.TestCase):
         """Should return 400 for missing list"""
         item = json.dumps({
             'nameofitem': 'Travel to paris'
-            'priceofitem':2000
+            'priceofitem': 2000
             })
         response = self.client.post('/mylist/3/items', data=item,
                                     headers={"Authorization": self.token})
@@ -60,7 +61,7 @@ class ItemTestCase(unittest.TestCase):
         item = json.dumps({
             
             'nameofitem': 'Travel tp paris',
-            'priceofitem': '7000'
+            'priceofitem': 7000
             
             })
         response = self.client.post('/mylist/1/items', data=item,

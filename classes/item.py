@@ -44,7 +44,7 @@ class Item(object):
         return response
 
     @staticmethod
-    def edit_item(user_id, bucket_id, item_id, new_item_name):
+    def edit_item(user_id, list_id, item_id, new_item_name):
         """
         Edits an item
 
@@ -60,7 +60,7 @@ class Item(object):
 
        mylist = ShoppinglistsModel.query.filter_by(id=list_id,
                                              user_id=user_id).first()
-        if not bucket:
+        if not mylist:
             response = jsonify({'Error': 'List with id '
                                          + str(user_id) + ' not found'})
             response.status_code = 400
